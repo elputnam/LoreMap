@@ -9,11 +9,11 @@ let font;
 
 //CCapture
 //var capture = false; // default is to not capture frames, can be changed with button in browser
-var capturer = new CCapture({
-  format:'webm', 
-  workersPath: 'js/',
-  framerate: 30
-});
+// var capturer = new CCapture({
+//   format:'webm', 
+//   workersPath: 'js/',
+//   framerate: 30
+// });
 
 function preload(){
   lore = loadStrings('data/mythemes.txt');
@@ -30,9 +30,9 @@ function setup() {
 }
 
 function draw() {
-    if (frameCount==1){
-    capturer.start();
-  };
+  //   if (frameCount==1){
+  //   capturer.start();
+  // };
   background(random(360), 100, 100, 1);
   stroke(0);
   noFill();
@@ -47,13 +47,13 @@ function draw() {
   x = random(width);
   y = random(height);
 
-  capturer.capture(document.getElementById('defaultCanvas0'));  
-  if (frameCount==9000){
-    save_record();
-  }
-  print(frameCount);
+  // capturer.capture(document.getElementById('defaultCanvas0'));  
+  // if (frameCount==9000){
+  //   save_record();
+  // }
+  // print(frameCount);
 }
 
-function save_record() {
-  capturer.save();
-}
+// function save_record() {
+//   capturer.save();
+// }
